@@ -10,6 +10,7 @@ public class Eletronico {
         this.marca = marca;
     }
 
+
     //indicador de ligado
     protected boolean Ligado() {
         return ligado;
@@ -27,15 +28,9 @@ public class Eletronico {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
     public String getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+    //sem set para que não mude a marca e modelo
 }

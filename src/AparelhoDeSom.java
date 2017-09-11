@@ -13,7 +13,7 @@ public class AparelhoDeSom extends Eletronico {
         cdPlayer = new CDPlayer(this);
         usbPlayer = new USBPlayer(this);
         this.potencia = potencia;
-        this.player = null;
+        this.player = null; //pra tipos não primitivos o estado vazio é null
         this.volume = 0;
     }
 

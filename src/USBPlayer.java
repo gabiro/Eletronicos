@@ -15,6 +15,11 @@ public class USBPlayer extends Player {
         return usbAtual.get(numMusica);
     }
 
+    @Override
+    public int numeroDeFaixas(){
+        return usbAtual.size();
+    }
+
     //abstract method
     @Override
     public AparelhoDeSom getAparelhoDeSom() {
@@ -22,16 +27,18 @@ public class USBPlayer extends Player {
     }
 
     @Override
-    public void avancarMusica() {
-        if (numMusica == usbAtual.size()-1) {
-            numMusica = -1;
+    public void proximaFaixa() {
+        //se tiver na última música
+        if (numMusica == usbAtual.size()-1){ //size()-1: útimo elemento do array
+            numMusica = 0; //recebe a primeira posição
         }
-        super.avancarMusica();
+        else super.proximaFaixa();
     }
 
 
     @Override
     public void recuarMusica() {
+
         if (numMusica == 0) {
             numMusica = usbAtual.size()-1;
         }

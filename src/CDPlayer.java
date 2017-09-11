@@ -13,6 +13,12 @@ public class CDPlayer extends Player {
     }
 
     @Override
+    public int numeroDeFaixas(){
+        return cdAtual.getFaixas().size();
+    }
+
+
+    @Override
     public AparelhoDeSom getAparelhoDeSom() {
         return this.aparelhoDeSom;
     }
